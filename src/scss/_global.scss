@@ -28,3 +28,38 @@ html {
         }
     }
 }
+
+.text-gold {
+    color: $gold;
+}
+
+.bg-alpha {
+    background-color: #00000000;
+}
+
+.badge-container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.store-badge {
+    width: 16rem;
+    margin-bottom: 2rem !important;
+}
+
+.screenshot {
+    width: 16rem;
+    margin-left: auto !important;
+}
+
+.fader {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+
+.fader.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}

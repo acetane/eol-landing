@@ -51,4 +51,35 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    var fadeIn = function () {
+        const container = document.body.querySelector('.fader');
+        if (!container) {
+            return;
+        }
+        if (window.scrollY === 0) {
+            navbarCollapsible.classList.remove('navbar-shrink')
+        } else {
+            navbarCollapsible.classList.add('navbar-shrink')
+        }
+
+    };
+
+    
+
+});
+
+$(document).on("scroll", function() {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height() / 1.25;
+    var tags = $(".fader");
+  
+    for (var i = 0; i < tags.length; i++) {
+        var tag = tags[i];
+
+        if ($(tag).position().top < pageBottom) {
+            $(tag).addClass("visible");
+        } else {
+            $(tag).removeClass("visible");
+        }
+    }
 });
